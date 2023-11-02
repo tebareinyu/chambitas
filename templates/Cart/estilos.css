@@ -1,0 +1,123 @@
+body {
+    background-color: #9e9e9e;
+    margin: 0;
+    Font-family: Arial;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+#HeaderEncabezado .HeaderTitle {
+    background-color: #0844a4;
+}
+
+#HeaderEncabezado .title {
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.Dts{
+    background-color: white;
+}
+
+.derecha{
+    display: table;
+    flex-wrap: right;
+    justify-content: space-evenly;
+    position: relative;
+    border: nome;
+    outline: nome;
+    padding: 10px 80px;
+}
+
+/*Botton de propiedades de la imagen*/
+#Contenedor .ImgIcon {
+    width: 175px;
+    margin-top: -70px;
+}
+
+.buttons{
+    margin-top: -80px;
+}
+
+/*Botton de retorno*/
+#Contenedor .btn-succes {
+    background: transparent;
+    border: transparent;
+    width: 300px;
+    border: nome;
+    outline: nome;
+    padding: 0px 100px;
+    text-align: left;
+}
+
+#Contenedor .link1{
+    color: gray;
+}
+
+/*Botton de atencion al cliente*/
+#Contenedor .btn-warning{
+    background: transparent;
+    border: transparent;
+    width: 300px;
+    border: nome;
+    outline: nome;
+    padding: 0px 100px;
+    text-align: right;
+}
+
+#Contenedor .link2{
+    color: gray;
+}
+
+#HeaderContent h1{
+    font-size: 2em;
+    text-align: center;
+}
+
+#HeaderContent h2{
+    font-size: 1em;
+    text-align: center;
+}
+
+#HeaderContent{
+    background-color: gray;
+}
+
+img.logo1 {
+    width: 50px;
+    height: 50px;
+}
+
+img.logoinstagram {
+    width: 90px;
+    height: 50px;
+}
+
+img.logox {
+    width: 50px;
+    height: 40px;
+}
+
+img.logoyoutube {
+    width: 50px;
+    height: 40px;
+}
+
+.custom-bg-color {
+    background-color: #0844a4;
+    /* Tu color azul personalizado */
+}

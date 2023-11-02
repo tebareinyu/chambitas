@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Cuenta</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body id="font">
+    <header>
+        <div class="contenedor-image">
+            <a href="#">
+                <i class="fas fa-arrow-left mi-icono"></i> <!-- Ícono de flecha -->
+            </a>
+            <img src="Chambitass.png" alt="Chambitas" class="imagen-centrada">
+        </div>
+    </header>
+    <div>
+       
+     
+        <form class="form">
+            <p class="title">Registrar cuenta </p>
+            <p class="message">inicia sesión para tener acceso completo a la app</p>
+                <div class="flex">
+                <label>
+                    <input class="input" type="text" placeholder="John" required="">
+                    <span>Nombre</span>
+                </label>
+        
+                <label>
+                    <input class="input" type="text" placeholder="López" required="">
+                    <span>Apellido</span>
+                </label>
+            </div>  
+        
+            <label>
+                <input class="input" type="email" placeholder="john@gmail.com" required="">
+                <span>Correo</span>
+            </label> 
+        
+            <label>
+                <input class="input" type="password" placeholder="*****" required="">
+                <span>Contraseña</span>
+            </label>
+            <label>
+                <input class="input" type="password" placeholder="*****" required="">
+                <span>Confirmar contraseña</span>
+            </label>
+            <button class="button" type="submit" value="Crear Cuenta"></button>
+            <p class="signin">¿Ya tiene una cuenta? <a href="/">ingresar</a> </p>
+        </form>
+
+    </div>
+    <footer class="footer">
+    
+        <div class="texto-redes">
+          <span>Contáctanos en nuestras redes sociales:</span>
+        </div>
+        
+        <div>
+          <a href="#" class="social-icon">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+    
+        <div class="derechos">
+          <p>© 2023 Chambitas. Todos los derechos reservados.</p>
+          <a class="text-reset fw-bold" href="https://mdbootstrap.com/"></a>
+        </div>
+      </footer>
+</body>
+</html>

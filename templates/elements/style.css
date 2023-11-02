@@ -1,0 +1,25 @@
+#nav-sb{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.sb-strong{
+    font-weight: bold;
+    font-size:19px;
+
+}
+.bg-sb-blue{
+    background-color:  #0844a4;
+}
+
+.img-sb-gt{
+    height: 18px;
+    margin-right: 6px;
+}
+div i.bi.icon-sb{
+    font-size: 28px;
+    margin-left: 30px;
+}
+.bg-sb-celeste{
+    background-color: #0844a4;
+}

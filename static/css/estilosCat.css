@@ -1,0 +1,256 @@
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#HeaderTitle .HeaderTitle {
+    background-color: #0844a4;
+    height: 40px;
+}
+
+#HeaderTitle .title {
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; 
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+body{    
+    margin: auto;
+    color: #333; 
+}
+
+
+
+/* Estilos para las imágenes en las tarjetas */
+.card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que la imagen cubra completamente el contenedor */
+    height: 100%; /* Asegura que la imagen sea cuadrada */
+    object-fit: cover; /* La imagen se ajustará sin deformarse */
+}
+
+
+/* Tarjetas de categorias*/
+.container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 250px 10em;
+    gap: 20px;
+}
+
+.item img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+
+.item{
+    display: grid;
+    gap: 20px;
+}
+
+.item {
+    border-radius: 10px;
+}
+
+
+
+
+.info-product{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+}
+
+
+/* Tarjetas de categorias estilo de imagen de la seccion 1 */
+
+.itempubli img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+
+.card-title,
+.card-text {
+    font-size: 14px;
+    font-weight: bold; /* Añade negrita */
+    text-align: center; /* Centra el texto */
+    margin: 0; /* Ajusta el margen para que el texto se ajuste al card */
+}
+
+
+
+/* Reducir el espacio superior del section */
+img.logo {
+    width: 210px;
+    height: 50px; 
+}
+img.logo1 {
+    width: 50px;
+    height: 50px;
+}
+img.logoinstagram {
+    width: 90px;
+    height: 50px;
+}
+img.logox {
+    width: 50px;
+    height: 40px;
+}
+img.logoyoutube {
+    width: 50px;
+    height: 40px;
+}
+.custom-bg-color {
+    background-color: #0844a4; /* Tu color azul personalizado */
+}
+
+/* Barra de busqueda */
+#SearchBar {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    width: 50%;
+    padding: 5px 10px;
+    border: 1px solid #939292;
+}
+
+
+#SearchBar input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-size: 1em;
+}
+
+#SearchBar span {
+    margin-right:  10px;
+    
+}
+
+/* texto y tamaño de los elementos de la barra de navegacion*/
+.navbar-nav .nav-link {
+    color: black; /* Cambiar el color del texto de la barra de navegacion a negro */
+    font-size: 14px; /* Aumentar el tamaño del texto */
+}
+
+/*Espaciado entre los elementos de la barra de navegacion*/
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.navbar-nav .nav-item {
+    flex: 1;
+    text-align: center;
+}
+
+/* estilo a icono de regresar al inicio */
+.regresar a::before {
+    content: "\e0a6"; /* Código de la flecha hacia la izquierda en Bootstrap Icons */
+    font-family: 'bootstrap-icons'; 
+    font-size: 1.10em; /* Tamaño del icono */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+.regresar a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: black; /* Cambia el color del texto a negro */
+}
+.regresar a:hover {
+    color: #555; /* Cambia el color al pasar el ratón por encima  */
+}
+
+/*tamaño de texto 'regresar al inicio'*/
+#regresar a {
+    font-size: 1.20em; /* Tamaño del texto */
+}
+
+#titulo-servicioslocales {
+    margin-top: 20px; /* Agrega un espacio entre regresar al inicio y la siguiente seccion*/
+    font-size: 2em; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+}
+
+/*Para ajustar el footer al final*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 280vh;
+}
+
+#contenido-principal {
+    flex: 1;
+}
+
+
+/*Estilo de seccion calificanos */
+  
+.rating {
+    font-size: 24px;
+  }
+  
+  .rating i {
+    color: #FFD700; /* Color de las estrellas rellenas */
+  }
+  
+  .custom-section {
+    border: 1px solid #ccc; /* Borde alrededor de cada sección */
+    padding: 20px;
+    margin-bottom: 20px; /* Espacio entre las secciones */
+  }
+  
+  .custom-section h2 {
+    font-size: 1.5em;
+  }
+  
+  .custom-section p {
+    font-size: 1em;
+  }
+
+
+  .custom-section {
+    margin-top: 600px; /* Ajusta el espacio superior de la sección de calificación */
+  }
+  
+  body {
+    min-height: 350vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #contenido-principal {
+    flex: 1;
+  }
+  
+
+.custom-section{
+    font-size: 14px;
+    font-weight: bold; /* Añade negrita */
+    text-align: center; /* Centra el texto */
+}
+
+
