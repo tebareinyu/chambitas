@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- BOOTSTRAP 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<script src="https://kit.fontawesome.com/ba568c50ef.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/estilosCat.css') }}">
+
+  <title>Categorias</title>
+
+</head>
+
+<style>
+  .bg-blue{
+      background: #0844a4;
+  }
+  .btn.bg-blue:hover {
+      background-color: #032e73; /* Fondo transparente */
+      color: inherit; /* Color de texto predeterminado */
+  }
+  .txt-gris{
+      color: rgb(122, 122, 122);
+  }
+  .bg-griss{
+      background: rgb(122, 122, 122);
+  }
+  .navbar-nav .nav-item {
+      display: flex;
+      align-items: center;
+  }
+  .form-group {
+      padding-top: 4%; /* Agregar padding-top */
+  }
+  a {
+      color: black;
+  }
+  
+  .bold-text {
+      font-weight: bold;
+  }
+  .text-gris-claro{
+      color:rgb(68, 68, 68);
+  }
+  .input-with-icon {
+      position: relative;
+  }
+
+  .input-with-icon input {
+      padding-left: 30px; /* Espacio para el ícono en el lado izquierdo */
+  }
+
+  .input-with-icon i {
+      position: absolute;
+      left: 10px; /* Ajusta la posición horizontal del ícono */
+      top: 50%; /* Centra verticalmente el ícono */
+      transform: translateY(-50%); /* Alinea verticalmente el ícono */
+  }
+  .paddin-footer{
+      padding: 7% 0;
+  }
+  .btn-foter{
+      border: 1px solid #929292;
+      color: #000;
+      background: white;
+  }
+  footer ul {
+      list-style: none; /* Elimina los puntos de la lista */
+      padding: 0;
+  }
+
+  footer ul li{
+      margin-top: 7px
+  }
+
+  footer a {
+      color: #fff;
+  }
+
+  footer h6{
+      font-weight: bold;
+      margin-bottom: 15%;
+  }
+
+</style>
+
+<body>
+
+    <section class="bg-blue">
+      <p class="text-center text-white p-2 m-0">Chambitas la mejor opcion para darte a conocer</p>
+    </section>
+
+    <section id="hero" class="m-2" py-2>
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Logo de la aplicación en la parte superior izquierda -->
+        <a class="navbar-brand" href="#">
+          <!--  Grid column -->
+          <img class="logo" src="/static/Chambitas.png" />
+        </a>
+        <div id="SearchBar">
+          <span class="bi bi-search"></span>
+          <input type="text" placeholder="Buscar...">
+        </div>
+        </a>
+        <!-- Icono de inicio de sesión en la parte superior derecha -->
+        <button class="btn btn-light" href="../login/login.html">👥 Iniciar Sesión</button>
+      </div>
+    </section>
+    
+    <section>
+      <!-- Segunda Sección (Navbar) -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item bold-text ">
+                <a class="nav-link active vertical-center text-gris-claro" aria-current="page" href="/home">Inicio</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link vertical-center text-gris-claro" href="#">Empresas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link vertical-center text-gris-claro" href="#">Servicios por Ubicacion</a> -->
+              </li>
+              <li class="nav-item bold-text">
+                <a class="nav-link vertical-center text-gris-claro"  href="/hirings">Contrataciones</a>
+              </li>
+              <li class="nav-item bold-text">
+                <a class="nav-link vertical-center text-gris-claro"  href="/complyments">Reclamos</a>
+              </li>
+              <li class="nav-item bold-text">
+                <a class="nav-link vertical-center text-gris-claro"  href="/contact">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+
+  <div id="regresar" class="regresar">
+    <a href="#">
+      <i class="bi bi-arrow-left"><h6>Regresar al inicio</h6></i>
+      
+    </a>
+  </div>
+
+  <div id="contenido-principal">
+    <div class="container">
+
+      <div class="row">
+        <div>
+          <h1 id="titulo-servicioslocales">Servicios de tu localidad</h1>
+        </div>
+        <!--codigo de la primera parte de cards -->
+        <div class="col-md-2">
+          <div class="itempubli">
+            <figure>
+              <img src="/static/Cards-Category/zyro-image.png" alt="producto">
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">Llantas para motos</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="itempubli">
+            <figure>
+              <img src="/static/Cards-Category/mecanicaadomi.png" alt="producto">
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">Mecanica</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="itempubli">
+            <figure>
+              <img src="/static/Cards-Category/florista.jpg" alt="producto">
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">Florista y cuidado de jardin</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="itempubli">
+            <figure>
+              <img src="/static/Cards-Category/veterinario.jpg" alt="producto">
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">Veterinario a domicilio</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="itempubli">
+            <figure>
+              <img src="/static/Cards-Category/electricista.jpg" alt="producto">
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">Instalaciones electricas</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="itempubli">
+            <figure>
+              <img src="/static/Cards-Category/Limpieza.jpg" alt="producto">
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Servicio de limpieza</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container">
+      <div class="row">
+        <div>
+          <h4>Services and products</h4>
+        </div>
+        <!--codigo de la segunda parte de cards -->
+        <div class="col-md-3">
+          <div class="item">
+            <figure>
+              <img src="/static/Cards-Category/c1-pintor.png" alt="producto">
+            </figure>
+            <div class="info-producto">
+              <h2>Nombre del servicio</h2>
+              <p class="Descripcion">Descripcion del servicio</p>
+              <p class="precio">Q100</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item">
+            <figure>
+              <img src="/static/Cards-Category/jardinero.jpg" alt="producto">
+            </figure>
+            <div class="info-producto">
+              <h2>Nombre del servicio</h2>
+              <p class="Descripcion">Descripcion del servicio</p>
+              <p class="precio">Q100</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item">
+            <figure>
+              <img src="/static/Cards-Category/enfermero.png" alt="producto">
+            </figure>
+            <div class="info-producto">
+              <h2>Nombre del servicio</h2>
+              <p class="Descripcion">Descripcion del servicio</p>
+              <p class="precio">Q100</p>
+            </div>
+          </div>
+  
+        </div>
+  
+        <div class="col-md-3">
+          <div class="item">
+            <figure>
+              <img src="/static/Cards-Category/constructor.jpg" alt="producto">
+            </figure>
+            <div class="info-producto">
+              <h2>Nombre del servicio</h2>
+              <p class="Descripcion">Descripcion del servicio</p>
+              <p class="precio">Q100</p>
+            </div>
+          </div>
+  
+        </div>
+        <div class="col-md-3">
+          <div class="item">
+            <figure>
+              <img src="/static/Cards-Category/panadero.png" alt="producto">
+            </figure>
+            <div class="info-producto">
+              <h2>Nombre del servicio</h2>
+              <p class="Descripcion">Descripcion del servicio</p>
+              <p class="precio">Q100</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item">
+            <figure>
+              <img src="/static/Cards-Category/estilistaservicio.jpg" alt="producto">
+            </figure>
+            <div class="info-producto">
+              <h2>Nombre del servicio</h2>
+              <p class="Descripcion">Descripcion del servicio</p>
+              <p class="precio">Q100</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item">
+            <figure>
+              <img src="/static/Cards-Category/maestroprivado.jpg" alt="producto">
+            </figure>
+            <div class="info-producto">
+              <h2>Nombre del servicio</h2>
+              <p class="Descripcion">Descripcion del servicio</p>
+              <p class="precio">Q100</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="item">
+            <figure>
+              <img src="/static/Cards-Category/electrico2.jpg" alt="producto">
+            </figure>
+            <div class="info-producto">
+              <h2>Nombre del servicio</h2>
+              <p class="Descripcion">Descripcion del servicio</p>
+              <p class="precio">Q100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- seccion de calificanos -->
+    <div class="container">
+      <div class="row">
+        <!-- Primera sección de estrellas -->
+        <div class="col-md-4">
+          <div class="custom-section">
+            <h2>Calificanos</h2>
+            <div class="rating">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <p>Califica el servicio que adquiriste</p>
+          </div>
+        </div>
+  
+        <!-- Segunda sección de estrellas -->
+        <div class="col-md-4">
+          <div class="custom-section">
+            <h2>Calidad y valor del servicio</h2>
+            <div class="rating">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <p>Si las expectativas del servicio se cumplieron</p>
+          </div>
+        </div>
+        <!-- Tercera sección de estrellas -->
+        <div class="col-md-4">
+          <div class="custom-section">
+            <h2>Efectividad y eficiencia</h2>
+            <div class="rating">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <p>Si el trabajo es de calidad y el tiempo es apropiado </p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+
+  </div>
+
+  
+
+<!-- Footer -->
+<footer class="text-center text-lg-start custom-bg-color text-white py-4">
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-secondary"></i>Mas Información?
+          </h6>
+          <p>
+            Conoce mas acerca de nosotros
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Atención al cliente
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Recomendaciones</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Fromas de Pago</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Terminos del servicio</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Politica y Privacidad</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Opiniones</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Conocenos
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Quienes Somos</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Nuestro Equipo</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Contactos</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Ubicación</h6>
+          <p><i class="fas fa-home me-3 text-secondary"></i> Chimaltenango Guatemala</p>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            info@chambitas.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> + 502 5567 5588</p>
+          <p><i class="fas fa-print me-3 text-secondary"></i> + 502 5567 5588</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Nuestras Redes Sociales:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 link-secondary">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="bi bi-twitter-x"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="bi bi-youtube"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="bi bi-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Seccion Social media -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="#">Chambitas.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+</body>
+
+</html>

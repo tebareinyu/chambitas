@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reclamos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="contenedor-image">
+      <a href="#">
+        <i class="fas fa-arrow-left mi-icono"></i> <!-- Ícono de flecha -->
+      </a>
+      <img src="Chambitass.png" alt="Chambitas" class="imagen-centrada">
+    </div>
+  </header>
+  <div>
+
+
+    <form class="form">
+      <p class="title">Presentar Reclamo</p>
+      <p class="message">Nos gustaría mejorar tu experiencia, cuéntanos tu reclamo</p>
+      <div class="flex">
+        <label>
+          <input class="input" type="text" placeholder="John" required="">
+          <span>Nombre</span>
+        </label>
+
+        <label>
+          <input class="input" type="text" placeholder="López" required="">
+          <span>Apellido</span>
+        </label>
+      </div>
+
+      <label>
+        <input class="input" type="email" placeholder="john@gmail.com" required="">
+        <span>Correo</span>
+      </label>
+
+      <label>
+        <textarea class="input" type="textarea" placeholder="escribe tu reclamo" required=""></textarea>
+        <span>Reclamo</span>
+
+      </label>
+      <button class="btnc" type="button" onclick="mostrarAlerta()">Crear Cuenta</button>
+
+      <div id="ventanaEmergente" class="ventana-emergente">
+        <div class="contenido">
+          <span class="cerrar" onclick="cerrarAlerta()">&times;</span>
+          <p>¡Formulario enviado, muchas gracias por tu feedback!</p>
+        </div>
+      </div>
+
+      <script>
+        function mostrarAlerta() {
+          const ventanaEmergente = document.getElementById("ventanaEmergente");
+          ventanaEmergente.style.display = "block";
+        }
+
+        function cerrarAlerta() {
+          const ventanaEmergente = document.getElementById("ventanaEmergente");
+          ventanaEmergente.style.display = "none";
+        }
+      </script>
+
+
+      <!-- <a href="#openModal">Lanzar el modal</a>
+
+      <div id="openModal" class="modalDialog">
+        <div>
+          <a href="#close" title="Close" class="close">X</a>
+          <h2>Gracias</h2>
+          <p>Tus opiniones nos ayudan a mejorar nuestro servicio</p>
+          <p>próximamente tendrás respuesta a tu reclamo</p>
+        </div>
+      </div> -->
+
+    </form>
+
+  </div>
+  <footer class="footer">
+
+    <div class="texto-redes">
+      <span>Contáctanos en nuestras redes sociales:</span>
+    </div>
+
+    <div>
+      <a href="#" class="social-icon">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="social-icon">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" class="social-icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="social-icon">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <div class="derechos">
+      <p>© 2023 Chambitas. Todos los derechos reservados.</p>
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/"></a>
+    </div>
+  </footer>
+</body>
+
+</html>

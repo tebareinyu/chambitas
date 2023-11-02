@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Chambitas Carrito</title>
+    <!-- BOOTSTRAP 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <section id="HeaderEncabezado">
+        <!--header solo para la reseña de la pagina -->
+        <header class="HeaderTitle">
+            <h1 class="title">Chambitas la mejor opcion para darte a conocer </h1>
+        </header>
+    </section>
+
+    <section id="Contenedor">
+        <header class="Dts">
+
+
+            <div class="derecha">
+                <!--Seccion del icon img chambitas-->
+                <a href="../home/home.html">
+                    <img class="ImgIcon" src="../icons/Chambitas.png"></a>
+                <br>
+            </div>
+
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" name="accion" value="Agregar" class="btn btn-succes"><a
+                        href="../product_details/product_detail.html" class="link1">
+                        <i class="bi bi-arrow-left"></i>Regresar a inicio</a></button>
+
+                <button type="submit" name="accion" value="Modificar" class="btn btn-warning">
+                    <a href="../details/details.html" class="link2">
+                        <i class="bi bi-question-circle"></i>Atencion al cliente</a></button>
+            </div>
+
+
+        </header>
+    </section>
+
+    <br><br><br>
+    <section id="HeaderContent">
+        <br><br>
+        <h1>Carrito de Compras</h1>
+        <br>
+        <h2>Se muestran todo los productos seleccionados</h2>
+        <br><br><br>
+    </section>
+
+    <table class="table tab-content">
+        <thead>
+            <tr>
+                <th>Tu orden </th>
+                <th></th>
+                <th></th>
+                <td>Resumen</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+
+                <td>
+                    <img class="img-thumbnaill rounded"
+                        src="https://d1ih8jugeo2m5m.cloudfront.net/2022/06/que-hace-un-contador.jpg" width="50" alt="">
+                </td>
+
+                <td>
+                    <h3>Contadora</h3>
+                    <p>Descripcion de la contadora</p>
+                    <div class="form-group">
+                        <input type="number" required class="form-switch" value="" name="txtPrecio" id="txtPrecio"
+                            placeholder="Enter the price">
+                    </div>
+                </td>
+
+                <td>
+                    <button class="btnDelete">
+                        <i class="bi bi-trash3-fill">
+                        </i></button>
+                    <br><br><br>
+
+                    <div class="form-group">
+                        <input type="numero" required class="form-switch" value="" name="txtPrecio" id="txtPrecio"
+                            placeholder="Enter the price">
+
+                        <input type="numero" required class="form-switch" value="" name="txtPrecio" id="txtPrecio"
+                            placeholder="Enter the price">
+                        <br><br>
+                        <label for="">you sabe 25%</label>
+                    </div>
+
+                </td>
+
+                <td>
+                    <div class="form-group">
+                        <label for="txtDescripcion">Items en el carrito: -- </label> <br>
+                        <label for="txtDescripcion">Descuento aplicado: --</label> <br>
+                        <label for="txtDescripcion">TOTAL:</label> <br>
+
+                        <button>Ir al pago</button>
+                    </div>
+
+                    <div class="codTarjeta">
+                        <label for="">Tarjeta de regalo</label>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Contratacion facil y segura</h1>
+    <label for="">Retorno gratuito en 30 dias</label><br><br>
+    <label for="">Metodo de pagos convenientes</label><br><br>
+    <label for="">Servicio a domicilio </label><br><br>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start custom-bg-color text-white py-4">
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3 text-secondary"></i>Mas Información?
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Atención al cliente
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Recomendaciones</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Fromas de Pago</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Terminos del servicio</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Politica y Privacidad</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Opiniones</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Conocenos
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Quienes Somos</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Nuestro Equipo</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Contactos</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Ubicación</h6>
+                        <p><i class="fas fa-home me-3 text-secondary"></i> Chimaltenango Guatemala</p>
+                        <p>
+                            <i class="fas fa-envelope me-3 text-secondary"></i>
+                            info@chambitas.com
+                        </p>
+                        <p><i class="fas fa-phone me-3 text-secondary"></i> + 502 5567 5588</p>
+                        <p><i class="fas fa-print me-3 text-secondary"></i> + 502 5567 5588</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Nuestras Redes Sociales:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 link-secondary">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="bi bi-youtube"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="" class="me-4 link-secondary">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="#">Chambitas.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- Footer -->
+
+</body>
+</html>

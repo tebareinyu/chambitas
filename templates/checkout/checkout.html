@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> <!-- Asegúrate de incluir la fuente de los iconos Font Awesome -->
+    <!-- BOOTSTRAP 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        /* Estilos personalizados para el contenido */
+        .custom-content {
+            padding: 30px;
+            background-color: #f3f3f3; /* Color de fondo para el contenido */
+        }
+
+        /* Estilos para la sección de checkout */
+        .checkout-container {
+            margin: 50px;
+        }
+
+        .checkout-title {
+            font-size: 24px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .checkout-section {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px transparent #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .checkout-section-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .checkout-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .checkout-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Estilos para el footer */
+        .custom-footer {
+            background-color: #0844a4; /* Nuevo color de fondo azul */
+            padding: 140px 0; /* Reduce el espacio superior del pie de página */
+            color: #fff; /* Texto blanco en el pie de página */
+            display: flex;
+            flex-direction: row; /* Cambia la dirección de los elementos a fila */
+            justify-content: space-between; /* Alinea los elementos al principio y al final */
+            align-items: center; /* Alinea los elementos verticalmente */
+        }
+
+        .social-icons {
+            font-size: 40px; /* Aumenta el tamaño de los iconos de redes sociales */
+            color: #fff; /* Texto blanco en los iconos */
+            margin: 0 20px; /* Espacio entre los iconos */
+        }
+
+        /* Estilos para el botón "Contáctanos" en el footer */
+        .container {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            margin-left: 100px;
+        }
+
+        button {
+            margin-left: 100px;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 20px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: right;
+        }
+
+        a:link {
+            text-decoration: none;
+        }
+
+        #HeaderEncabezado .HeaderTitle {
+            background-color: #0844a4;
+        }
+
+        #HeaderEncabezado .title {
+            font-size: 0.9em;
+            display: flex;
+            flex-direction: column;
+            align-items: right;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .Dts {
+            background-color: white;
+        }
+
+        .derecha {
+            display: table;
+            flex-wrap: right;
+            justify-content: space-evenly;
+            position: relative;
+            border: nome;
+            outline: nome;
+            padding: 10px 80px;
+        }
+
+        /* Botón de propiedades de la imagen */
+        #Contenedor .ImgIcon {
+            width: 175px;
+            margin-top: -70px;
+        }
+
+        .buttons {
+            margin-top: -80px;
+        }
+
+        /* Botón de retorno */
+        #Contenedor .btn-succes {
+            background: transparent;
+            border: transparent;
+            width: 300px;
+            border: nome;
+            outline: nome;
+            padding: 0px 100px;
+            text-align: left;
+        }
+
+        #Contenedor .link1 {
+            color: gray;
+        }
+
+        /* Botón de atención al cliente */
+        #Contenedor .btn-warning {
+            background: transparent;
+            border: transparent;
+            width: 300px;
+            border: nome;
+            outline: nome;
+            padding: 0px 100px;
+            text-align: right;
+        }
+
+        #Contenedor .link2 {
+            color: gray;
+        }
+
+        #HeaderContent h1 {
+            font-size: 2em;
+            text-align: center;
+        }
+
+        #HeaderContent h2 {
+            font-size: 1em;
+            text-align: center;
+        }
+
+        #HeaderContent {
+            background-color: gray;
+        }
+
+        img.logo1 {
+            width: 50px;
+            height: 50px;
+        }
+
+        .user-section {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .user-section a {
+            margin-left: 550px;
+        
+        }
+
+        .checkout-container2 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 40vh;
+        }
+
+
+    
+        /* Estilos para la sección de resumen */
+.resumen-section {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.resumen-section h3 {
+    margin-right: 20px;
+}
+
+.user-card {
+    width: 800px;
+    border: 1px solid #4e4e4e;
+    border-radius: 5px;
+    box-shadow: 0 67 100px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 10px;
+    justify-content: end;
+    margin-bottom: 60px; /* Agrega espacio entre los user-card y resumen-card */
+}
+
+
+.resumen-card {
+    width: 300px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.checkout-input {
+    font-size: 20px; /* Ajusta el tamaño del texto del monto */
+    color: #007bff; /* Cambia el color del monto según tus preferencias */
+    margin-top: 5px; /* Ajusta el espacio entre el texto y el monto */
+}
+    </style>
+</head>
+<body>
+    <section id="HeaderEncabezado">
+        <!-- Header solo para la reseña de la pagina -->
+        <header class="HeaderTitle">
+            <h1 class="title">Chambitas, la mejor opción para darte a conocer</h1>
+        </header>
+    </section>
+
+    <section id="Contenedor">
+        <header class="Dts">
+            <div class="derecha">
+                <!-- Sección del icono de Chambitas -->
+                <a href="../home/home.html">
+                    <img class="ImgIcon" src="../templates/Chambitas.png">
+                </a>
+                <br>
+            </div>
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" name="accion" value="Agregar" class="btn btn-succes">
+                    <a href="#" class="link1">
+                        <i class="bi bi-arrow-left"></i> Regresar a inicio
+                    </a>
+                </button>
+                <button type="submit" name="accion" value="Modificar" class="btn btn-warning">
+                    <a href="#" class="link2">
+                        <i class="bi bi-question-circle"></i> Atención al cliente
+                    </a>
+                </button>
+            </div>
+        </header>
+    </section>
+   
+    <!-- Contenido de la página -->
+    <div class="checkout-container">
+        <h1 class="checkout-title">Pago</h1>
+        <p class="checkout-title">Gastos de envío y códigos de descuento aplicados al finalizar la compra.</p>
+        <div class="user-section">
+            <i class="fas fa-user"></i>Usuario
+            <a href="#" class="link2"><i class="fas fa-pencil-alt"></i> Editar Dirección</a>
+        </div>
+    
+        <div class="checkout-container2">
+            <div class="user-card">
+                <div class="card-header">
+                    <h3>Información del Usuario</h3>
+                </div>
+                <div class="card-body">
+                    <p><strong>Nombre:</strong> Nombre del Usuario</p>
+                    <p><strong>Correo Electrónico:</strong> usuario@example.com</p>
+                    <p><strong>Dirección:</strong> Dirección del Usuario</p>
+                    <!-- Agrega más información del usuario según tus necesidades -->
+                </div>
+            </div>
+    
+            <div class="checkout-section">
+                <h2 class="user-section">Resumen</h2>
+                <!-- Contenido relacionado con el resumen del total -->
+            
+                <div class="resumen-card">
+                    <div class="card-body">
+                        <p><strong>Artículos en el carrito:</strong> Q 25.00</p>
+                        <p><strong>Gastos de envío:</strong> Q 5.00</p>
+                        <p><strong>Ahorros aplicados:</strong> Q -5.00</p>
+                        <hr> <!-- Línea divisoria -->
+                        <h4>Total</h4>
+                        <p class="checkout-input"><span>Q</span>25.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout-section">
+            <!-- Contenido relacionado con el pago -->
+            <label for="card-number">Número de tarjeta:</label>
+            <input type="text" id="card-number" class="checkout-input">
+            <label for="card-name">Nombre en la tarjeta:</label>
+            <input type="text" id="card-name" class "checkout-input">
+            <label for="card-expiry">Fecha de caducidad:</label>
+            <input type="text" id="card-expiry" class="checkout-input">
+            <label for="card-cvv">CVV:</label>
+            <input type="text" id="card-cvv" class="checkout-input">
+        </div>
+        <div class="checkout-section">
+            <h2 class="checkout-section-title">Descripción del Cliente</h2>
+            <!-- Contenido relacionado con la descripción del cliente -->
+            <label for="customer-description">Descripción:</label>
+            <textarea id="customer-description" class="checkout-input"></textarea>
+        </div>
+        <div class="checkout-section">
+            <h2 class="checkout-section-title">Detalles de Envío</h2>
+            <!-- Contenido relacionado con los detalles de envío -->
+            <label for="shipping-method">Método de envío:</label>
+            <select id="shipping-method" class="checkout-input">
+                <option value="pickup">Recoger en tienda</option>
+                <option value="home-delivery">Entrega a domicilio</option>
+            </select>
+            <div id="pickup-address" class="checkout-input">
+                <label for="pickup-location">Punto de recogida:</label>
+                <input type="text" id="pickup-location" class="checkout-input">
+            </div>
+            <div id "home-delivery-address" class="checkout-input">
+                <label for="delivery-address">Dirección de entrega:</label>
+                <input type="text" id="delivery-address" class="checkout-input">
+            </div>
+        </div>
+        <div class="checkout-section">
+            <h2 class="checkout-section-title">Resumen del Total</h2>
+            <!-- Contenido relacionado con el resumen del total -->
+            <!-- Puedes agregar elementos aquí, como la lista de productos y el total a pagar. -->
+        </div>
+        <div class="checkout-section">
+            <h2 class="checkout-section-title">Método de Pago</h2>
+            <!-- Contenido relacionado con el método de pago -->
+            <label for="payment-method">Selecciona tu método de pago:</label>
+            <select id="payment-method" class="checkout-input">
+                <option value="credit-card">Tarjeta de crédito</option>
+                <option value="paypal">PayPal</option>
+                <!-- Agrega más opciones según sea necesario -->
+            </select>
+        </div>
+        <button class="checkout-button">Realizar Pago</button>
+    </div>
+
+    <!-- Pie de página con iconos de redes sociales y sección de información -->
+    <footer class="custom-footer">
+        <div class="container">
+            <h2><strong>¿Más información?</strong></h2>
+            <button>Contactanos</button>
+        </div>
+        <div class="container">
+            <h5>Atención al cliente</h5>
+            <p><a href="#">Recomendaciones</a></p>
+            <p><a href="#">Formas de pago</a></p>
+            <p><a href="#">Términos del servicio</a></p>
+            <p><a href="#">Política de privacidad</a></p>
+            <p><a href="#">Opiniones</a></p>
+        </div>
+        <div class="container">
+            <h5>Conócenos</h5>
+            <p><a href="#">Quiénes somos</a></p>
+            <p><a href="#">Nuestro equipo</a></p>
+            <p><a href="#">Contáctanos</a></p>
+        </div>
+        <div class="container">
+            <h5>Ubicación</h5>
+            <select>
+                <option value="pais1">Guatemala</option>
+                <option value="pais2">Guatemala</option>
+                <!-- Agrega más opciones de países según sea necesario -->
+            </select>
+        </div>
+        <div class="container">
+            <a href="#"><i class="fab fa-facebook social-icons"></i></a>
+            <a href="#"><i class="fab fa-instagram social-icons"></i></a>
+            <a href="#"><i class="fab fa-youtube social-icons"></i></a>
+            <a href="#"><i class="bi bi-x social-icons"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

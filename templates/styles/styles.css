@@ -1,0 +1,132 @@
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#HeaderTitle .HeaderTitle {
+    background-color: #0844a4;
+    height: 40px;
+}
+
+#HeaderTitle .title {
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; 
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    color: #333; 
+}
+
+/* Tarjetas de categorias*/
+.container-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.item {
+    border-radius: 10px;
+}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.item figure{
+    overflow: hidden;
+}
+
+.item:hover img{
+    transform: scale(1.2);
+}
+
+.info-product{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Reducir el espacio superior del section */
+img.logo {
+    width: 200px;
+    height: 150px; 
+}
+img.logo1 {
+    width: 50px;
+    height: 50px;
+}
+img.logoinstagram {
+    width: 90px;
+    height: 50px;
+}
+img.logox {
+    width: 50px;
+    height: 40px;
+}
+img.logoyoutube {
+    width: 50px;
+    height: 40px;
+}
+.custom-bg-color {
+    background-color: #0844a4; /* Tu color azul personalizado */
+}
+
+/* Barra de busqueda */
+#SearchBar {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    width: 50%;
+    padding: 5px 10px;
+    border: 1px solid #939292;
+}
+
+
+#SearchBar input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-size: 1em;
+}
+
+#SearchBar span {
+    margin-right:  10px;
+    
+}
+
+
+
+nav.navbar {
+    margin-bottom: 100px; /* Añade espacio entre el navbar y el contenido */
+}
+
+footer {
+    margin-top: 100px; /* Añade espacio entre el footer y el contenido */
+}
+
+
