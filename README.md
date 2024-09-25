@@ -1,18 +1,69 @@
-Proyecto Chambitas Esteban Barrios 
-Universidad Regional
+
+# Proyecto Chambitas 
+### Autor - [@Esteban Barrios](https://github.com/tebareinyu/) 
+#### Institución: Universidad Regional - Ing. Luis Felipe Figueroa Molina
+
+### Descripción del Proyecto
+El proyecto Chambitas es una plataforma web que facilita la búsqueda de oportunidades laborales para diferentes categorías profesionales. La aplicación está construida utilizando Python y Flask como framework principal.
 
 
-No tiene buena documentacion
-se elimino la carpeta chambitas (donde estaba configurado el entorno virtual)
-El entorno de pyton chambitas no esta bien configurado
-No se sabe que modulos pip de pyton estan usando, se hara manual
-se creo la carpeta Requeriments para poder instalarlo
-La app no tiene una base de datos para poder instalar
-se creo un byppas para poder usar la app
-se elimino el package y lock porque no esa haciendo uso de node ni de las librerias.
+### 1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/tebareinyu/chambitas.git
+```
+
+### 2. Cambiar a la carpeta de instalacion chambitas
+```bash
+cd chambitas
+```
+
+### 3. Crear un entorno virtual de python
+```bash
+python -m venv venv
+source venv/bin/activate  # En Linux/Mac
+.\venv\Scripts\activate   # En Windows
+```
+
+### 4. Instalar Dependencias
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Ejecutar la aplicacion
+```bash
+python app.py
+```
+### Cambios recientes:
+- **Entorno virtual:** Se eliminó el entorno virtual mal configurado previamente en la carpeta `chambitas`.
+- **Módulos de Python:** El entorno de Python no estaba bien configurado y no se sabía qué módulos estaban siendo utilizados. Se creó el archivo `requirements.txt` para gestionar las dependencias de Python.
+- **Base de datos:** No hay una base de datos disponible. Se implementó un bypass temporal para que la aplicación funcione sin la base de datos.
+- **Dependencias de Node.js:** Se eliminaron los archivos `package.json` y `package-lock.json`, ya que no se estaban utilizando dependencias de Node.js ni librerías gestionadas por npm.
 
 
 
+### Optimizaciones
+
+- No tiene buena documentacion
+- se elimino la carpeta chambitas (donde estaba configurado el entorno virtual)
+- El entorno de pyton chambitas no esta bien configurado
+- No se sabe que modulos pip de pyton estan usando, se hara manual
+- se creo la carpeta Requeriments para poder instalarlo
+- La app no tiene una base de datos para poder instalar
+- se creo un byppas para poder usar la app
+- se elimino el package y lock porque no esa haciendo uso de node ni de las librerias.
+
+
+
+
+## Soporte
+
+Para seguimiento y soporte, email teba.mompiano@gmail.com.
+
+
+## Estructura del Proyecto
+
+```bash
 chambitas
 ├── .gitignore
 ├── app.py
@@ -127,3 +178,12 @@ chambitas
 │   │   └── signin.html
 │   └── styles
 │       └── styles.css
+```
+
+
+## Badges
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+
