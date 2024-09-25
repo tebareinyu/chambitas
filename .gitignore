@@ -20,7 +20,7 @@ dist/
 *.jar
 
 #Env omitir
-venv
+venv/
 
 # Maven
 target/

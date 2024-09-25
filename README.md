@@ -9,8 +9,9 @@ No se sabe que modulos pip de pyton estan usando, se hara manual
 se creo la carpeta Requeriments para poder instalarlo
 La app no tiene una base de datos para poder instalar
 se creo un byppas para poder usar la app
-
 se elimino el package y lock porque no esa haciendo uso de node ni de las librerias.
+
+
 
 chambitas
 ├── .gitignore
