@@ -1,1 +1,10 @@
 Este es el inicio del proyecto 
+
+
+No tiene buena documentacion
+se elimino la carpeta chambitas (donde estaba configurado el entorno virtual)
+El entorno de pyton chambitas no esta bien configurado
+No se sabe que modulos pip de pyton estan usando, se hara manual
+se creo la carpeta Requeriments para poder instalarlo
+La app no tiene una base de datos para poder instalar
+se creo un byppas para poder usar la app

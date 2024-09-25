@@ -1,81 +1,48 @@
-from flask import Flask
-from flask import render_template, jsonify
-import pyodbc
+from flask import Flask, render_template, request
 import requests
 from PIL import Image
 
 app = Flask(__name__, static_url_path='/static')
 
 
-app=Flask(__name__)
+# # Conexión a la base de datos (comentar o eliminar mientras no tengas acceso)
+# def create_db_connection():
+#     server = '(localdb)\CHMBT'
+#     database = 'Chambitas'
+#     username = 'Admin'
+#     password = '12345'
+# 
+#     conn = pyodbc.connect(f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}')
+#     return conn
+#
+# cursor = conn.cursor()
 
-def create_db_connection():
-    server = '(localdb)\CHMBT'   # Replace with your SQL Server instance name or IP address
-    database = 'Chambitas'  # Replace with your database name
-    username = 'Admin'  # Replace with your SQL Server username
-    password = '12345'  # Replace with your SQL Server password
 
-    conn = pyodbc.connect(f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}')
-    return conn
-
-cursor = conn.cursor()
-
-
-# Configuraci�n de la conexi�n a la base de datos
-# connection = pyodbc.connect('DRIVER={SQL Server};SERVER=NOVA;DATABASE=proyectoBD;UID=proyecto;PWD=1234;TrustServerCertificate=yes')
-
-# # Funci�n para ejecutar consultas en la base de datos
-# def execute_query(query):
-#     with connection.cursor() as cursor:
-#         cursor.execute(query)
-#         columns = [column[0] for column in cursor.description]
-#         rows = [dict(zip(columns, row)) for row in cursor.fetchall()]
-#     return rows
-
-# Ruta para la aplicaci�n web
-
-# @app.route('/')
-# def inicio():
-#     # Consumir la API
-#     api_url = 'http://127.0.0.1:5000/api/a' 
-#     response = requests.get(api_url)
-    
-#     if response.status_code == 200:
-#         data = response.json()['data']
-#         return render_template('login/login.html', data=data)
-#     else:
-#         return render_template('error.html', message=f'Error al obtener datos de la API: {response.status_code}')
-
-# # Ruta para la API
+# # Ruta para la API que estaba conectada a la base de datos (comentada por ahora)
 # @app.route('/api/a', methods=['GET'])
 # def obtener_todos_los_registros():
 #     try:
 #         query_result = execute_query('SELECT * FROM Productos')
 #         return jsonify({'data': query_result})
 #     except Exception as e:
-#         return jsonify({'error': str(e)}), 500  # Error de servidor
-#     #return render_template('login/login.html')
+#         return jsonify({'error': str(e)}), 500
+
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
-    data = request.form
-    username = data.get('username')
-    password = data.get('password')
+    if request.method == 'POST':
+        data = request.form
+        username = data.get('username')
+        password = data.get('password')
 
-    # Realizar la verificación del usuario (puedes usar el código de verificación del usuario de la respuesta anterior)
+        # Autenticación simple para pruebas
+        if username == 'admin@admin.com' and password == 'password123':
+            return render_template('login/success.html', username=username)
+        else:
+            return render_template('login/login.html', error='Invalid credentials')
 
-    if user:
-        return render_template('login/success.html', username=username)
-    else:
-        return render_template('login/login.html', error='Invalid credentials')
-
-    # Renderizar la plantilla de inicio de sesión
+    # Renderizar la plantilla de inicio de sesión si es un GET request
     return render_template('login/login.html')
-
-# @app.route('/logout')
-# def logout():
-
-#     return render_template('login/index.html')
 
 
 @app.route('/home')
